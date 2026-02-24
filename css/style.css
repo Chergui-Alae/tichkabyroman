@@ -1,0 +1,454 @@
+ * {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Poppins', sans-serif;
+    color: #2C1810;
+    line-height: 1.6;
+}
+
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
+h1, h2, h3, h4 {
+    font-family: 'Playfair Display', serif;
+    font-weight: 700;
+}
+
+.logo {
+    font-size: 1.8rem;
+    font-weight: 700;
+    line-height: 1.2;
+}
+
+.logo-tichka {
+    color: #D4AF37;
+    font-family: 'Playfair Display', serif;
+}
+
+.logo-by {
+    color: #8B5A2B;
+    font-size: 1.2rem;
+    margin: 0 2px;
+}
+
+.logo-roman {
+    color: #2C1810;
+    font-family: 'Playfair Display', serif;
+}
+
+header {
+    background-color: #FFF9F0;
+    box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+}
+
+nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1rem 5%;
+    max-width: 1400px;
+    margin: 0 auto;
+}
+
+.nav-links {
+    display: flex;
+    list-style: none;
+    gap: 2.5rem;
+}
+
+.nav-links a {
+    color: #2C1810;
+    text-decoration: none;
+    font-weight: 500;
+    transition: color 0.3s;
+    position: relative;
+}
+
+.nav-links a:hover,
+.nav-links a.active {
+    color: #D4AF37;
+}
+
+.nav-links a.active::after {
+    content: '';
+    position: absolute;
+    bottom: -5px;
+    left: 0;
+    width: 100%;
+    height: 2px;
+    background-color: #D4AF37;
+}
+
+.menu-burger {
+    display: none;
+    font-size: 1.8rem;
+    cursor: pointer;
+}
+
+.hero {
+    height: 80vh;
+    background-image: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.3)), url('../images/hero-boulangerie.jpg');
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    color: white;
+}
+
+.hero-content h1 {
+    font-size: 4rem;
+    margin-bottom: 0.5rem;
+    text-shadow: 2px 2px 4px rgba(0,0,0,0.3);
+}
+
+.hero-content .by {
+    color: #D4AF37;
+    font-size: 2.5rem;
+}
+
+.hero-content .subtitle {
+    font-size: 1.5rem;
+    margin-bottom: 2rem;
+    font-weight: 300;
+}
+
+.btn {
+    display: inline-block;
+    background-color: #D4AF37;
+    color: #2C1810;
+    padding: 1rem 2.5rem;
+    text-decoration: none;
+    border-radius: 50px;
+    font-weight: 600;
+    transition: all 0.3s;
+    border: 2px solid #D4AF37;
+}
+
+.btn:hover {
+    background-color: transparent;
+    color: white;
+    border-color: white;
+}
+
+.signature {
+    padding: 5rem 0;
+    background-color: #FDF8F0;
+    text-align: center;
+}
+
+.signature h2 {
+    font-size: 2.5rem;
+    margin-bottom: 1.5rem;
+}
+
+.signature h2 span {
+    color: #D4AF37;
+}
+
+.signature p {
+    max-width: 800px;
+    margin: 0 auto;
+    font-size: 1.2rem;
+    color: #5C3B1E;
+}
+
+.specialites {
+    padding: 5rem 0;
+}
+
+.specialites h2 {
+    text-align: center;
+    font-size: 2.5rem;
+    margin-bottom: 3rem;
+    color: #2C1810;
+}
+
+.produits-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 2.5rem;
+}
+
+.produit-card {
+    background: white;
+    border-radius: 15px;
+    overflow: hidden;
+    box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+    transition: transform 0.3s;
+}
+
+.produit-card:hover {
+    transform: translateY(-10px);
+}
+
+.produit-image {
+    height: 250px;
+    overflow: hidden;
+}
+
+.produit-image img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: transform 0.3s;
+}
+
+.produit-card:hover .produit-image img {
+    transform: scale(1.1);
+}
+
+.produit-card h3 {
+    padding: 1rem 1rem 0.5rem;
+    font-size: 1.3rem;
+    color: #2C1810;
+}
+
+.produit-card p {
+    padding: 0 1rem 1.5rem;
+    color: #666;
+}
+
+.instagram-feed {
+    padding: 5rem 0;
+    background-color: #FDF8F0;
+    text-align: center;
+}
+
+.instagram-feed h2 {
+    font-size: 2.5rem;
+    margin-bottom: 0.5rem;
+}
+
+.section-subtitle {
+    color: #D4AF37;
+    font-weight: 600;
+    margin-bottom: 2rem;
+}
+
+.insta-grid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 1rem;
+    margin: 2rem 0;
+}
+
+.insta-item {
+    height: 250px;
+    overflow: hidden;
+    border-radius: 10px;
+}
+
+.insta-item img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: transform 0.3s;
+}
+
+.insta-item:hover img {
+    transform: scale(1.1);
+}
+
+.insta-link a {
+    color: #2C1810;
+    text-decoration: none;
+    font-weight: 600;
+    font-size: 1.1rem;
+    transition: color 0.3s;
+}
+
+.insta-link a:hover {
+    color: #D4AF37;
+}
+
+footer {
+    background-color: #2C1810;
+    color: white;
+    padding: 3rem 0 1rem;
+}
+
+.footer-content {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 2rem;
+    margin-bottom: 2rem;
+}
+
+.footer-logo .logo-tichka,
+.footer-logo .logo-roman {
+    color: white;
+}
+
+.footer-logo .logo-by {
+    color: #D4AF37;
+}
+
+.footer-content h4 {
+    margin-bottom: 1rem;
+    color: #D4AF37;
+}
+
+.footer-content p {
+    line-height: 1.8;
+    color: #E0D5C0;
+}
+
+.social-icons {
+    display: flex;
+    gap: 1rem;
+}
+
+.social-icons a {
+    color: #E0D5C0;
+    text-decoration: none;
+    transition: color 0.3s;
+}
+
+.social-icons a:hover {
+    color: #D4AF37;
+}
+
+.footer-bottom {
+    text-align: center;
+    padding-top: 2rem;
+    border-top: 1px solid #5C3B1E;
+    color: #E0D5C0;
+}
+
+.page-header {
+    background: linear-gradient(rgba(44,24,16,0.8), rgba(44,24,16,0.8)), url('../images/header-bg.jpg');
+    background-size: cover;
+    background-position: center;
+    color: white;
+    text-align: center;
+    padding: 5rem 2rem;
+}
+
+.page-header h1 {
+    font-size: 3rem;
+    margin-bottom: 0.5rem;
+}
+
+.page-header p {
+    font-size: 1.2rem;
+    color: #D4AF37;
+}
+
+.produits-categorie {
+    padding: 4rem 0;
+}
+
+.produits-liste {
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+}
+
+.produit-detail {
+    display: grid;
+    grid-template-columns: 200px 1fr;
+    gap: 2rem;
+    background: white;
+    padding: 1.5rem;
+    border-radius: 10px;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+}
+
+.produit-detail img {
+    width: 200px;
+    height: 150px;
+    object-fit: cover;
+    border-radius: 8px;
+}
+
+.produit-info h3 {
+    color: #2C1810;
+    margin-bottom: 0.5rem;
+}
+
+.produit-info p {
+    color: #666;
+    margin-bottom: 1rem;
+}
+
+.prix {
+    font-size: 1.3rem;
+    font-weight: 600;
+    color: #D4AF37;
+}
+
+@media screen and (max-width: 768px) {
+    .nav-links {
+        display: none;
+    }
+    
+    .menu-burger {
+        display: block;
+    }
+    
+    .hero-content h1 {
+        font-size: 2.5rem;
+    }
+    
+    .hero-content .by {
+        font-size: 1.8rem;
+    }
+    
+    .footer-content {
+        grid-template-columns: repeat(2, 1fr);
+    }
+    
+    .insta-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+    
+    .produit-detail {
+        grid-template-columns: 1fr;
+        text-align: center;
+    }
+    
+    .produit-detail img {
+        width: 100%;
+        margin: 0 auto;
+    }
+}
+
+@media screen and (max-width: 480px) {
+    .hero {
+        height: 60vh;
+    }
+    
+    .hero-content h1 {
+        font-size: 2rem;
+    }
+    
+    .btn {
+        padding: 0.8rem 1.5rem;
+    }
+    
+    .footer-content {
+        grid-template-columns: 1fr;
+        text-align: center;
+    }
+    
+    .social-icons {
+        justify-content: center;
+    }
+    
+    .insta-grid {
+        grid-template-columns: 1fr;
+    }
+}
