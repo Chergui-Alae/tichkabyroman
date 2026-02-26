@@ -3,141 +3,201 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>TICHKA BY ROMAN - Boulangerie, Pâtisserie & Traiteur à Témara</title>
-    <meta name="description" content="TICHKA BY ROMAN à Témara : pains artisanaux, pâtisseries fines, spécialités marocaines et services traiteur pour vos réceptions.">
-    <link rel="stylesheet" href="css/style.css">
+    <title>TICHKA BY ROMAN | Boulangerie, Pâtisserie & Traiteur de luxe à Témara</title>
+    <meta name="description" content="TICHKA BY ROMAN à Témara : pains artisanaux d'exception, pâtisseries fines, spécialités marocaines authentiques et service traiteur haut de gamme pour vos événements.">
+    
+    <!-- Fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700&family=Poppins:wght@300;400;500;600&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;500;600;700&family=Montserrat:wght@300;400;500;600&display=swap" rel="stylesheet">
+    
+    <!-- Font Awesome for icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="css/style.css">
 </head>
 <body>
-    <header>
-        <nav>
-            <div class="logo">
-                <span class="logo-tichka">TICHKA</span>
-                <span class="logo-by">BY</span>
-                <span class="logo-roman">ROMAN</span>
-            </div>
-            <ul class="nav-links">
-                <li><a href="index.html" class="active">Accueil</a></li>
-                <li><a href="produits.html">Nos créations</a></li>
-                <li><a href="traiteur.html">Traiteur</a></li>
-                <li><a href="contact.html">Contact</a></li>
-            </ul>
-            <div class="menu-burger">☰</div>
-        </nav>
+    <!-- Header avec navigation -->
+    <header class="header">
+        <div class="container">
+            <nav class="navbar">
+                <a href="index.html" class="logo">
+                    <span class="logo-tichka">TICHKA</span>
+                    <span class="logo-by">by</span>
+                    <span class="logo-roman">ROMAN</span>
+                </a>
+                
+                <ul class="nav-menu">
+                    <li><a href="index.html" class="active">Accueil</a></li>
+                    <li><a href="produits.html">Nos créations</a></li>
+                    <li><a href="traiteur.html">Traiteur</a></li>
+                    <li><a href="histoire.html">Notre histoire</a></li>
+                    <li><a href="contact.html">Contact</a></li>
+                </ul>
+                
+                <div class="hamburger">
+                    <span class="bar"></span>
+                    <span class="bar"></span>
+                    <span class="bar"></span>
+                </div>
+            </nav>
+        </div>
     </header>
 
-    <main>
-        <section class="hero">
-            <div class="hero-content">
-                <h1>TICHKA <span class="by">BY</span> ROMAN</h1>
-                <p class="subtitle">L'authenticité marocaine, le savoir-faire français</p>
-                <a href="#decouvrir" class="btn">Découvrir</a>
-            </div>
-        </section>
+    <!-- Hero Section avec grande image -->
+    <section class="hero">
+        <div class="hero-content">
+            <h1 class="hero-title">
+                <span class="hero-tichka">TICHKA</span>
+                <span class="hero-by">by</span>
+                <span class="hero-roman">ROMAN</span>
+            </h1>
+            <p class="hero-subtitle">L'authenticité marocaine, l'élégance française</p>
+            <a href="#decouvrir" class="btn btn-primary">Découvrir</a>
+        </div>
+    </section>
 
-        <section id="decouvrir" class="signature">
-            <div class="container">
-                <h2>Bienvenue chez <span>TICHKA BY ROMAN</span></h2>
-                <p class="description-longue">
-                    TICHKA BY ROMAN, connu brièvement par Tichka à Témara, est sans conteste l'un des lieux incontournables de Témara, et probablement l'une des meilleures boulangeries pâtisseries de la région. Vous y trouverez de savoureux pains, de délicieuses pâtisseries ainsi que d'excellentes spécialités marocaines qui feront le bonheur des plus fins gourmets. Tichka vous propose également des prestations de traiteur pour faire de vos réceptions et cérémonies de véritables fêtes gastronomiques.
-                </p>
-            </div>
-        </section>
-
-        <section class="specialites">
-            <div class="container">
-                <h2>Nos spécialités</h2>
-                <div class="produits-grid">
-                    <div class="produit-card">
-                        <div class="produit-image">
-                            <img src="images/pains.jpg" alt="Pains artisanaux">
-                        </div>
-                        <h3>Boulangerie</h3>
-                        <p>Pains au levain, baguettes tradition, pains complets... Un savoir-faire artisanal pour des pains d'exception.</p>
-                    </div>
-                    <div class="produit-card">
-                        <div class="produit-image">
-                            <img src="images/patisseries.jpg" alt="Pâtisseries fines">
-                        </div>
-                        <h3>Pâtisserie</h3>
-                        <p>Créations gourmandes, entremets, tartes fines et viennoiseries feuilletées au pur beurre.</p>
-                    </div>
-                    <div class="produit-card">
-                        <div class="produit-image">
-                            <img src="images/marocain.jpg" alt="Spécialités marocaines">
-                        </div>
-                        <h3>Spécialités marocaines</h3>
-                        <p>Cornes de gazelle, ghriba, mhencha, baklawa... Les saveurs authentiques du Maroc.</p>
-                    </div>
-                </div>
-            </div>
-        </section>
-
-        <section class="traiteur-section">
-            <div class="container">
-                <div class="traiteur-content">
-                    <div class="traiteur-text">
-                        <h2>Service Traiteur</h2>
-                        <p>Pour vos réceptions, mariages, cérémonies ou événements d'entreprise, TICHKA BY ROMAN met son savoir-faire à votre service. Des prestations sur mesure pour faire de vos moments de partage de véritables fêtes gastronomiques.</p>
-                        <ul class="traiteur-list">
-                            <li>✓ Buffets personnalisés</li>
-                            <li>✓ Pâtisseries orientales et occidentales</li>
-                            <li>✓ Pièces montées et gâteaux de cérémonie</li>
-                            <li>✓ Plateaux de mignardises</li>
-                        </ul>
-                        <a href="contact.html" class="btn">Demander un devis</a>
-                    </div>
-                    <div class="traiteur-image">
-                        <img src="images/traiteur.jpg" alt="Service traiteur TICHKA BY ROMAN">
-                    </div>
-                </div>
-            </div>
-        </section>
-
-        <section class="instagram-feed">
-            <div class="container">
-                <h2>Suivez notre actualité</h2>
-                <p class="section-subtitle">@tichkabyroman sur Instagram</p>
-                <div class="insta-grid">
-                    <div class="insta-item"><img src="images/insta1.jpg" alt="Instagram"></div>
-                    <div class="insta-item"><img src="images/insta2.jpg" alt="Instagram"></div>
-                    <div class="insta-item"><img src="images/insta3.jpg" alt="Instagram"></div>
-                    <div class="insta-item"><img src="images/insta4.jpg" alt="Instagram"></div>
-                </div>
-                <div class="insta-link">
-                    <a href="https://instagram.com/tichkabyroman" target="_blank">Suivez-nous sur Instagram →</a>
-                </div>
-            </div>
-        </section>
-    </main>
-
-    <footer>
+    <!-- Section Présentation avec la description -->
+    <section id="decouvrir" class="presentation">
         <div class="container">
-            <div class="footer-content">
-                <div class="footer-logo">
-                    <span class="logo-tichka">TICHKA</span>
-                    <span class="logo-by">BY</span>
-                    <span class="logo-roman">ROMAN</span>
+            <div class="section-header">
+                <span class="section-subtitle">Notre univers</span>
+                <h2 class="section-title">L'excellence artisanale à Témara</h2>
+            </div>
+            
+            <div class="presentation-text">
+                <p class="lead">TICHKA BY ROMAN, connu brièvement par Tichka à Témara, est sans conteste l'un des lieux incontournables de Témara, et probablement l'une des meilleures boulangeries pâtisseries de la région.</p>
+                
+                <p>Vous y trouverez de savoureux pains, de délicieuses pâtisseries ainsi que d'excellentes spécialités marocaines qui feront le bonheur des plus fins gourmets. Tichka vous propose également des prestations de traiteur pour faire de vos réceptions et cérémonies de véritables fêtes gastronomiques.</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Section Nos Spécialités en 3 cartes -->
+    <section class="specialites">
+        <div class="container">
+            <div class="section-header">
+                <span class="section-subtitle">Savoir-faire d'exception</span>
+                <h2 class="section-title">Nos spécialités</h2>
+            </div>
+            
+            <div class="cards-grid">
+                <!-- Carte Boulangerie -->
+                <div class="card">
+                    <div class="card-icon">
+                        <i class="fas fa-bread-slice"></i>
+                    </div>
+                    <h3>Boulangerie</h3>
+                    <p>Pains au levain, baguettes tradition, pains complets, fermentation longue. Un savoir-faire artisanal pour des pains d'exception.</p>
+                    <a href="produits.html#boulangerie" class="card-link">Découvrir <i class="fas fa-arrow-right"></i></a>
                 </div>
-                <div class="footer-hours">
+                
+                <!-- Carte Pâtisserie -->
+                <div class="card">
+                    <div class="card-icon">
+                        <i class="fas fa-cake"></i>
+                    </div>
+                    <h3>Pâtisserie</h3>
+                    <p>Créations gourmandes, entremets, tartes fines, viennoiseries feuilletées au pur beurre. Des desserts qui enchantent les papilles.</p>
+                    <a href="produits.html#patisserie" class="card-link">Découvrir <i class="fas fa-arrow-right"></i></a>
+                </div>
+                
+                <!-- Carte Spécialités Marocaines -->
+                <div class="card">
+                    <div class="card-icon">
+                        <i class="fas fa-moon"></i>
+                    </div>
+                    <h3>Spécialités marocaines</h3>
+                    <p>Cornes de gazelle, ghriba, mhencha, baklawa, chebakia... Les saveurs authentiques du Maroc préparées avec passion.</p>
+                    <a href="produits.html#marocain" class="card-link">Découvrir <i class="fas fa-arrow-right"></i></a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Section Traiteur mise en avant -->
+    <section class="traiteur-highlight">
+        <div class="container">
+            <div class="traiteur-wrapper">
+                <div class="traiteur-content">
+                    <span class="highlight-badge">Service premium</span>
+                    <h2>Art Traiteur pour vos événements</h2>
+                    <p>Faites de vos réceptions et cérémonies de véritables fêtes gastronomiques. Notre équipe met son savoir-faire à votre service pour des moments inoubliables.</p>
+                    
+                    <ul class="traiteur-list">
+                        <li><i class="fas fa-check"></i> Buffers personnalisés</li>
+                        <li><i class="fas fa-check"></i> Pâtisseries orientales & occidentales</li>
+                        <li><i class="fas fa-check"></i> Pièces montées et gâteaux de cérémonie</li>
+                        <li><i class="fas fa-check"></i> Plateaux de mignardises</li>
+                    </ul>
+                    
+                    <a href="traiteur.html" class="btn btn-secondary">Découvrir nos prestations</a>
+                </div>
+                <div class="traiteur-image">
+                    <img src="images/traiteur.jpg" alt="Service traiteur TICHKA BY ROMAN">
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Section Instagram -->
+    <section class="instagram">
+        <div class="container">
+            <div class="section-header">
+                <span class="section-subtitle">Suivez notre actualité</span>
+                <h2 class="section-title">@tichkabyroman</h2>
+            </div>
+            
+            <div class="instagram-grid">
+                <div class="insta-item"><img src="images/insta1.jpg" alt="Instagram"></div>
+                <div class="insta-item"><img src="images/insta2.jpg" alt="Instagram"></div>
+                <div class="insta-item"><img src="images/insta3.jpg" alt="Instagram"></div>
+                <div class="insta-item"><img src="images/insta4.jpg" alt="Instagram"></div>
+            </div>
+            
+            <div class="instagram-btn">
+                <a href="https://instagram.com/tichkabyroman" target="_blank" class="btn btn-outline">
+                    <i class="fab fa-instagram"></i> Suivez-nous
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-grid">
+                <div class="footer-col">
+                    <div class="footer-logo">
+                        <span class="logo-tichka">TICHKA</span>
+                        <span class="logo-by">by</span>
+                        <span class="logo-roman">ROMAN</span>
+                    </div>
+                    <p class="footer-text">L'authenticité marocaine, l'élégance française. Depuis 2020, nous régalons les gourmets de Témara et des environs.</p>
+                </div>
+                
+                <div class="footer-col">
                     <h4>Horaires</h4>
                     <p>Tous les jours : 6h30 - 21h00</p>
                 </div>
-                <div class="footer-contact">
+                
+                <div class="footer-col">
                     <h4>Contact</h4>
                     <p>Témara, Maroc</p>
                     <p>05 37 XX XX XX</p>
+                    <p>contact@tichkabyroman.ma</p>
                 </div>
-                <div class="footer-social">
+                
+                <div class="footer-col">
                     <h4>Suivez-nous</h4>
-                    <div class="social-icons">
-                        <a href="https://instagram.com/tichkabyroman" target="_blank">Instagram</a>
-                        <a href="#">Facebook</a>
+                    <div class="social-links">
+                        <a href="#"><i class="fab fa-instagram"></i></a>
+                        <a href="#"><i class="fab fa-facebook-f"></i></a>
                     </div>
                 </div>
             </div>
+            
             <div class="footer-bottom">
                 <p>&copy; 2025 TICHKA BY ROMAN - Tous droits réservés</p>
             </div>
