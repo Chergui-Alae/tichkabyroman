@@ -4,49 +4,381 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Contact - TICHKA BY ROMAN</title>
-    <link rel="stylesheet" href="css/style.css">
-    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700&family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;500;600;700&family=Montserrat:wght@300;400;500;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <style>
+        /* Mêmes styles que les autres pages */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Montserrat', sans-serif;
+            background-color: #fcf9f4;
+            color: #1e2a1e;
+        }
+
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 20px;
+        }
+
+        :root {
+            --vert-fonce: #1e2a1e;
+            --noir: #1a1a1a;
+            --dore: #c9a44c;
+            --beige: #fcf9f4;
+        }
+
+        h1, h2, h3, .logo {
+            font-family: 'Cormorant Garamond', serif;
+            font-weight: 600;
+        }
+
+        header {
+            background-color: var(--noir);
+            padding: 20px 0;
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+            box-shadow: 0 4px 10px rgba(0,0,0,0.2);
+        }
+
+        nav {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .logo {
+            font-size: 32px;
+            text-decoration: none;
+            color: var(--beige);
+            letter-spacing: 1px;
+        }
+
+        .logo span {
+            color: var(--dore);
+        }
+
+        .nav-links {
+            display: flex;
+            list-style: none;
+            gap: 30px;
+        }
+
+        .nav-links a {
+            text-decoration: none;
+            color: var(--beige);
+            font-weight: 500;
+            transition: color 0.3s;
+        }
+
+        .nav-links a:hover,
+        .nav-links a.active {
+            color: var(--dore);
+        }
+
+        .page-header {
+            background: linear-gradient(rgba(0,0,0,0.7), rgba(0,0,0,0.7)), url('images/contact-bg.jpg');
+            background-size: cover;
+            background-position: center;
+            padding: 100px 0;
+            text-align: center;
+            color: white;
+        }
+
+        .page-header h1 {
+            font-size: 60px;
+            margin-bottom: 10px;
+        }
+
+        .page-header p {
+            font-size: 20px;
+            color: var(--dore);
+        }
+
+        .contact-section {
+            padding: 80px 0;
+            background: white;
+        }
+
+        .contact-grid {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 50px;
+        }
+
+        .contact-info {
+            background: var(--beige);
+            padding: 40px;
+            border-radius: 10px;
+        }
+
+        .contact-info h2 {
+            font-size: 32px;
+            color: var(--vert-fonce);
+            margin-bottom: 30px;
+        }
+
+        .info-item {
+            margin-bottom: 25px;
+        }
+
+        .info-item i {
+            color: var(--dore);
+            font-size: 20px;
+            width: 30px;
+        }
+
+        .info-item h3 {
+            font-size: 18px;
+            margin-bottom: 5px;
+            color: var(--noir);
+        }
+
+        .info-item p {
+            color: #666;
+        }
+
+        .contact-form {
+            background: white;
+            padding: 40px;
+            border-radius: 10px;
+            box-shadow: 0 5px 20px rgba(0,0,0,0.1);
+        }
+
+        .contact-form h2 {
+            font-size: 32px;
+            color: var(--vert-fonce);
+            margin-bottom: 30px;
+        }
+
+        .form-group {
+            margin-bottom: 20px;
+        }
+
+        .form-group input,
+        .form-group textarea {
+            width: 100%;
+            padding: 12px 15px;
+            border: 1px solid #ddd;
+            border-radius: 5px;
+            font-family: 'Montserrat', sans-serif;
+        }
+
+        .form-group textarea {
+            height: 150px;
+            resize: vertical;
+        }
+
+        .btn {
+            display: inline-block;
+            padding: 12px 30px;
+            background-color: var(--dore);
+            color: var(--noir);
+            text-decoration: none;
+            font-weight: 600;
+            border: none;
+            border-radius: 50px;
+            cursor: pointer;
+            transition: all 0.3s;
+        }
+
+        .btn:hover {
+            background-color: var(--vert-fonce);
+            color: white;
+        }
+
+        .map {
+            padding: 80px 0;
+            background: var(--beige);
+            text-align: center;
+        }
+
+        .map h2 {
+            font-size: 32px;
+            color: var(--vert-fonce);
+            margin-bottom: 30px;
+        }
+
+        .map-placeholder {
+            background: #ddd;
+            height: 400px;
+            border-radius: 10px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: #666;
+        }
+
+        footer {
+            background-color: var(--noir);
+            color: white;
+            padding: 60px 0 30px;
+        }
+
+        .footer-grid {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 40px;
+            margin-bottom: 40px;
+        }
+
+        .footer-col h4 {
+            color: var(--dore);
+            margin-bottom: 20px;
+        }
+
+        .footer-col p {
+            color: rgba(255,255,255,0.8);
+            margin-bottom: 10px;
+        }
+
+        .social-links {
+            display: flex;
+            gap: 15px;
+        }
+
+        .social-links a {
+            color: white;
+            font-size: 20px;
+            transition: color 0.3s;
+        }
+
+        .social-links a:hover {
+            color: var(--dore);
+        }
+
+        .footer-bottom {
+            text-align: center;
+            padding-top: 30px;
+            border-top: 1px solid rgba(255,255,255,0.1);
+        }
+
+        @media (max-width: 768px) {
+            .contact-grid,
+            .footer-grid {
+                grid-template-columns: 1fr;
+            }
+
+            .page-header h1 {
+                font-size: 40px;
+            }
+        }
+    </style>
 </head>
 <body>
     <header>
-        <nav>
-            <div class="logo">
-                <span class="logo-tichka">TICHKA</span>
-                <span class="logo-by">BY</span>
-                <span class="logo-roman">ROMAN</span>
-            </div>
-            <ul class="nav-links">
-                <li><a href="index.html">Accueil</a></li>
-                <li><a href="produits.html">Nos créations</a></li>
-                <li><a href="traiteur.html">Traiteur</a></li>
-                <li><a href="contact.html" class="active">Contact</a></li>
-            </ul>
-            <div class="menu-burger">☰</div>
-        </nav>
+        <div class="container">
+            <nav>
+                <a href="index.html" class="logo"><span>TICHKA</span> by ROMAN</a>
+                <ul class="nav-links">
+                    <li><a href="index.html">Accueil</a></li>
+                    <li><a href="produits.html">Nos créations</a></li>
+                    <li><a href="traiteur.html">Traiteur</a></li>
+                    <li><a href="contact.html" class="active">Contact</a></li>
+                </ul>
+            </nav>
+        </div>
     </header>
 
-    <main>
-        <section class="page-header">
-            <h1>Contactez-nous</h1>
+    <section class="page-header">
+        <div class="container">
+            <h1>Contact</h1>
             <p>Nous sommes à votre écoute</p>
-        </section>
+        </div>
+    </section>
 
-        <section class="contact-section">
-            <div class="container">
+    <section class="contact-section">
+        <div class="container">
+            <div class="contact-grid">
                 <div class="contact-info">
-                    <h2>TICHKA BY ROMAN</h2>
-                    <p>Témara, Maroc</p>
-                    <p>Tél : 05 37 XX XX XX</p>
-                    <p>Instagram : @tichkabyroman</p>
+                    <h2>Nos coordonnées</h2>
+                    <div class="info-item">
+                        <i class="fas fa-map-marker-alt"></i>
+                        <h3>Adresse</h3>
+                        <p>Témara, Maroc</p>
+                    </div>
+                    <div class="info-item">
+                        <i class="fas fa-phone"></i>
+                        <h3>Téléphone</h3>
+                        <p>05 37 XX XX XX</p>
+                    </div>
+                    <div class="info-item">
+                        <i class="fas fa-envelope"></i>
+                        <h3>Email</h3>
+                        <p>contact@tichkabyroman.ma</p>
+                    </div>
+                    <div class="info-item">
+                        <i class="fas fa-clock"></i>
+                        <h3>Horaires</h3>
+                        <p>Tous les jours : 6h30 - 21h00</p>
+                    </div>
+                    <div class="info-item">
+                        <i class="fab fa-instagram"></i>
+                        <h3>Instagram</h3>
+                        <p>@tichkabyroman</p>
+                    </div>
+                </div>
+
+                <div class="contact-form">
+                    <h2>Envoyez-nous un message</h2>
+                    <form>
+                        <div class="form-group">
+                            <input type="text" placeholder="Votre nom" required>
+                        </div>
+                        <div class="form-group">
+                            <input type="email" placeholder="Votre email" required>
+                        </div>
+                        <div class="form-group">
+                            <input type="tel" placeholder="Votre téléphone">
+                        </div>
+                        <div class="form-group">
+                            <textarea placeholder="Votre message" required></textarea>
+                        </div>
+                        <button type="submit" class="btn">Envoyer</button>
+                    </form>
                 </div>
             </div>
-        </section>
-    </main>
+        </div>
+    </section>
+
+    <section class="map">
+        <div class="container">
+            <h2>Nous trouver</h2>
+            <div class="map-placeholder">
+                <i class="fas fa-map-marked-alt" style="font-size: 50px; margin-right: 10px;"></i>
+                Carte interactive bientôt disponible
+            </div>
+        </div>
+    </section>
 
     <footer>
-        <!-- Même footer -->
-    </footer>
-    
-    <script src="js/script.js"></script>
-</body>
-</html> 
+        <div class="container">
+            <div class="footer-grid">
+                <div class="footer-col">
+                    <h4>TICHKA BY ROMAN</h4>
+                    <p>L'authenticité marocaine, l'élégance française</p>
+                </div>
+                <div class="footer-col">
+                    <h4>Horaires</h4>
+                    <p>Tous les jours : 6h30 - 21h00</p>
+                </div>
+                <div class="footer-col">
+                    <h4>Contact</h4>
+                    <p>Témara, Maroc</p>
+                    <p>05 37 XX XX XX</p>
+                    <div class="social-links">
+                        <a href="#"><i class="fab fa-instagram"></i></a>
+                        <a href="#"><i class="fab fa-facebook-f"></i></a>
+                    </div>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2025

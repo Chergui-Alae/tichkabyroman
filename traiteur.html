@@ -4,147 +4,374 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Service Traiteur - TICHKA BY ROMAN</title>
-    <link rel="stylesheet" href="css/style.css">
-    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700&family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;500;600;700&family=Montserrat:wght@300;400;500;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <style>
+        /* Mêmes styles que produits.html */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Montserrat', sans-serif;
+            background-color: #fcf9f4;
+            color: #1e2a1e;
+        }
+
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 20px;
+        }
+
+        :root {
+            --vert-fonce: #1e2a1e;
+            --noir: #1a1a1a;
+            --dore: #c9a44c;
+            --beige: #fcf9f4;
+        }
+
+        h1, h2, h3, .logo {
+            font-family: 'Cormorant Garamond', serif;
+            font-weight: 600;
+        }
+
+        header {
+            background-color: var(--noir);
+            padding: 20px 0;
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+            box-shadow: 0 4px 10px rgba(0,0,0,0.2);
+        }
+
+        nav {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .logo {
+            font-size: 32px;
+            text-decoration: none;
+            color: var(--beige);
+            letter-spacing: 1px;
+        }
+
+        .logo span {
+            color: var(--dore);
+        }
+
+        .nav-links {
+            display: flex;
+            list-style: none;
+            gap: 30px;
+        }
+
+        .nav-links a {
+            text-decoration: none;
+            color: var(--beige);
+            font-weight: 500;
+            transition: color 0.3s;
+        }
+
+        .nav-links a:hover,
+        .nav-links a.active {
+            color: var(--dore);
+        }
+
+        .page-header {
+            background: linear-gradient(rgba(0,0,0,0.7), rgba(0,0,0,0.7)), url('images/traiteur-bg.jpg');
+            background-size: cover;
+            background-position: center;
+            padding: 100px 0;
+            text-align: center;
+            color: white;
+        }
+
+        .page-header h1 {
+            font-size: 60px;
+            margin-bottom: 10px;
+        }
+
+        .page-header p {
+            font-size: 20px;
+            color: var(--dore);
+        }
+
+        .intro {
+            padding: 80px 0;
+            background: white;
+            text-align: center;
+        }
+
+        .intro p {
+            max-width: 800px;
+            margin: 0 auto;
+            font-size: 18px;
+            line-height: 1.8;
+        }
+
+        .services {
+            padding: 80px 0;
+            background: var(--beige);
+        }
+
+        .services h2 {
+            font-size: 42px;
+            color: var(--vert-fonce);
+            text-align: center;
+            margin-bottom: 50px;
+        }
+
+        .services-grid {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 30px;
+        }
+
+        .service-card {
+            background: white;
+            padding: 40px 25px;
+            border-radius: 10px;
+            text-align: center;
+            box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+        }
+
+        .service-card i {
+            font-size: 50px;
+            color: var(--dore);
+            margin-bottom: 20px;
+        }
+
+        .service-card h3 {
+            font-size: 24px;
+            margin-bottom: 15px;
+        }
+
+        .formules {
+            padding: 80px 0;
+            background: white;
+        }
+
+        .formules h2 {
+            font-size: 42px;
+            color: var(--vert-fonce);
+            text-align: center;
+            margin-bottom: 50px;
+        }
+
+        .formules-grid {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 30px;
+            max-width: 900px;
+            margin: 0 auto;
+        }
+
+        .formule-card {
+            background: var(--beige);
+            padding: 40px 30px;
+            border-radius: 10px;
+            text-align: center;
+            box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+        }
+
+        .formule-card h3 {
+            font-size: 28px;
+            color: var(--noir);
+            margin-bottom: 20px;
+        }
+
+        .formule-card ul {
+            list-style: none;
+            margin: 30px 0;
+        }
+
+        .formule-card li {
+            margin: 10px 0;
+        }
+
+        .btn {
+            display: inline-block;
+            padding: 12px 30px;
+            background-color: var(--dore);
+            color: var(--noir);
+            text-decoration: none;
+            font-weight: 600;
+            border-radius: 50px;
+            transition: all 0.3s;
+        }
+
+        .btn:hover {
+            background-color: var(--vert-fonce);
+            color: white;
+        }
+
+        footer {
+            background-color: var(--noir);
+            color: white;
+            padding: 60px 0 30px;
+        }
+
+        .footer-grid {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 40px;
+            margin-bottom: 40px;
+        }
+
+        .footer-col h4 {
+            color: var(--dore);
+            margin-bottom: 20px;
+        }
+
+        .footer-col p {
+            color: rgba(255,255,255,0.8);
+            margin-bottom: 10px;
+        }
+
+        .social-links {
+            display: flex;
+            gap: 15px;
+        }
+
+        .social-links a {
+            color: white;
+            font-size: 20px;
+            transition: color 0.3s;
+        }
+
+        .social-links a:hover {
+            color: var(--dore);
+        }
+
+        .footer-bottom {
+            text-align: center;
+            padding-top: 30px;
+            border-top: 1px solid rgba(255,255,255,0.1);
+        }
+
+        @media (max-width: 768px) {
+            .services-grid,
+            .formules-grid,
+            .footer-grid {
+                grid-template-columns: 1fr;
+            }
+
+            .page-header h1 {
+                font-size: 40px;
+            }
+        }
+    </style>
 </head>
 <body>
     <header>
-        <nav>
-            <div class="logo">
-                <span class="logo-tichka">TICHKA</span>
-                <span class="logo-by">BY</span>
-                <span class="logo-roman">ROMAN</span>
-            </div>
-            <ul class="nav-links">
-                <li><a href="index.html">Accueil</a></li>
-                <li><a href="produits.html">Nos créations</a></li>
-                <li><a href="traiteur.html" class="active">Traiteur</a></li>
-                <li><a href="contact.html">Contact</a></li>
-            </ul>
-            <div class="menu-burger">☰</div>
-        </nav>
+        <div class="container">
+            <nav>
+                <a href="index.html" class="logo"><span>TICHKA</span> by ROMAN</a>
+                <ul class="nav-links">
+                    <li><a href="index.html">Accueil</a></li>
+                    <li><a href="produits.html">Nos créations</a></li>
+                    <li><a href="traiteur.html" class="active">Traiteur</a></li>
+                    <li><a href="contact.html">Contact</a></li>
+                </ul>
+            </nav>
+        </div>
     </header>
 
-    <main>
-        <section class="page-header">
+    <section class="page-header">
+        <div class="container">
             <h1>Service Traiteur</h1>
-            <p>Pour vos réceptions et cérémonies</p>
-        </section>
+            <p>Pour vos événements et cérémonies</p>
+        </div>
+    </section>
 
-        <section class="traiteur-intro">
-            <div class="container">
-                <p class="intro-text">TICHKA BY ROMAN vous propose des prestations de traiteur pour faire de vos réceptions et cérémonies de véritables fêtes gastronomiques. Que ce soit pour un mariage, un anniversaire, une réception professionnelle ou tout autre événement, notre équipe met son savoir-faire à votre service pour créer des moments inoubliables.</p>
-            </div>
-        </section>
+    <section class="intro">
+        <div class="container">
+            <p>Faites de vos réceptions, mariages, cérémonies ou événements d'entreprise de véritables fêtes gastronomiques avec TICHKA BY ROMAN. Notre équipe met son savoir-faire à votre service pour des moments inoubliables.</p>
+        </div>
+    </section>
 
-        <section class="traiteur-services">
-            <div class="container">
-                <h2>Nos prestations traiteur</h2>
-                <div class="services-grid">
-                    <div class="service-card">
-                        <div class="service-icon">🥐</div>
-                        <h3>Petits-déjeuners</h3>
-                        <p>Viennoiseries fraîches, pains assortis, confitures maison et jus de fruits.</p>
-                    </div>
-                    <div class="service-card">
-                        <div class="service-icon">🥪</div>
-                        <h3>Buffets déjeunatoires</h3>
-                        <p>Sandwiches gourmets, salades composées, quiches et tartes salées.</p>
-                    </div>
-                    <div class="service-card">
-                        <div class="service-icon">🍰</div>
-                        <h3>Pâtisseries</h3>
-                        <p>Entremets, tartes fines, petits fours sucrés et pâtisseries orientales.</p>
-                    </div>
-                    <div class="service-card">
-                        <div class="service-icon">🎂</div>
-                        <h3>Gâteaux de cérémonie</h3>
-                        <p>Pièces montées, gâteaux à étages, wedding cakes personnalisés.</p>
-                    </div>
-                    <div class="service-card">
-                        <div class="service-icon">🍢</div>
-                        <h3>Cocktails dînatoires</h3>
-                        <p>Mignardises salées et sucrées, verrines, brochettes et amuse-bouches.</p>
-                    </div>
-                    <div class="service-card">
-                        <div class="service-icon">🥮</div>
-                        <h3>Spécialités marocaines</h3>
-                        <p>Cornes de gazelle, ghriba, mhencha, baklawa et autres délices orientaux.</p>
-                    </div>
+    <section class="services">
+        <div class="container">
+            <h2>Nos prestations</h2>
+            <div class="services-grid">
+                <div class="service-card">
+                    <i class="fas fa-utensils"></i>
+                    <h3>Buffets</h3>
+                    <p>Personnalisés selon vos envies et le thème de votre événement</p>
+                </div>
+                <div class="service-card">
+                    <i class="fas fa-cake"></i>
+                    <h3>Pâtisseries</h3>
+                    <p>Orientales et occidentales, pour tous les goûts</p>
+                </div>
+                <div class="service-card">
+                    <i class="fas fa-glass-cheers"></i>
+                    <h3>Pièces montées</h3>
+                    <p>Gâteaux de cérémonie, wedding cakes, créations uniques</p>
                 </div>
             </div>
-        </section>
+        </div>
+    </section>
 
-        <section class="traiteur-formules">
-            <div class="container">
-                <h2>Nos formules</h2>
-                <div class="formules-grid">
-                    <div class="formule-card">
-                        <h3>Formule Essentielle</h3>
-                        <p class="prix">Sur mesure</p>
-                        <ul>
-                            <li>✓ Buffet personnalisé</li>
-                            <li>✓ Pâtisseries assorties</li>
-                            <li>✓ Boissons incluses</li>
-                            <li>✓ Service compris</li>
-                        </ul>
-                        <a href="contact.html" class="btn-small">Demander un devis</a>
-                    </div>
-                    <div class="formule-card">
-                        <h3>Formule Prestige</h3>
-                        <p class="prix">Sur mesure</p>
-                        <ul>
-                            <li>✓ Buffet gastronomique</li>
-                            <li>✓ Pièce montée</li>
-                            <li>✓ Pâtisseries orientales</li>
-                            <li>✓ Service traiteur complet</li>
-                        </ul>
-                        <a href="contact.html" class="btn-small">Demander un devis</a>
-                    </div>
+    <section class="formules">
+        <div class="container">
+            <h2>Nos formules</h2>
+            <div class="formules-grid">
+                <div class="formule-card">
+                    <h3>Formule Essentielle</h3>
+                    <ul>
+                        <li>✓ Buffet personnalisé</li>
+                        <li>✓ Pâtisseries assorties</li>
+                        <li>✓ Service compris</li>
+                    </ul>
+                    <a href="contact.html" class="btn">Demander un devis</a>
+                </div>
+                <div class="formule-card">
+                    <h3>Formule Prestige</h3>
+                    <ul>
+                        <li>✓ Buffet gastronomique</li>
+                        <li>✓ Pièce montée</li>
+                        <li>✓ Pâtisseries orientales</li>
+                        <li>✓ Service traiteur complet</li>
+                    </ul>
+                    <a href="contact.html" class="btn">Demander un devis</a>
                 </div>
             </div>
-        </section>
-
-        <section class="traiteur-contact">
-            <div class="container">
-                <h2>Pour un devis personnalisé</h2>
-                <p>Contactez-nous pour discuter de votre projet et obtenir un devis adapté à vos besoins.</p>
-                <a href="contact.html" class="btn">Contactez-nous</a>
-            </div>
-        </section>
-    </main>
+        </div>
+    </section>
 
     <footer>
         <div class="container">
-            <div class="footer-content">
-                <div class="footer-logo">
-                    <span class="logo-tichka">TICHKA</span>
-                    <span class="logo-by">BY</span>
-                    <span class="logo-roman">ROMAN</span>
+            <div class="footer-grid">
+                <div class="footer-col">
+                    <h4>TICHKA BY ROMAN</h4>
+                    <p>L'authenticité marocaine, l'élégance française</p>
                 </div>
-                <div class="footer-hours">
+                <div class="footer-col">
                     <h4>Horaires</h4>
                     <p>Tous les jours : 6h30 - 21h00</p>
                 </div>
-                <div class="footer-contact">
+                <div class="footer-col">
                     <h4>Contact</h4>
                     <p>Témara, Maroc</p>
                     <p>05 37 XX XX XX</p>
-                </div>
-                <div class="footer-social">
-                    <h4>Suivez-nous</h4>
-                    <div class="social-icons">
-                        <a href="https://instagram.com/tichkabyroman" target="_blank">Instagram</a>
-                        <a href="#">Facebook</a>
+                    <div class="social-links">
+                        <a href="#"><i class="fab fa-instagram"></i></a>
+                        <a href="#"><i class="fab fa-facebook-f"></i></a>
                     </div>
                 </div>
             </div>
             <div class="footer-bottom">
-                <p>&copy; 2025 TICHKA BY ROMAN - Tous droits réservés</p>
+                <p>&copy; 2025 TICHKA BY ROMAN</p>
             </div>
         </div>
     </footer>
-
-    <script src="js/script.js"></script>
 </body>
 </html>

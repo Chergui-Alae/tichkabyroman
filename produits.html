@@ -8,18 +8,227 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;500;600;700&family=Montserrat:wght@300;400;500;600&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
-    <link rel="stylesheet" href="css/style.css">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Montserrat', sans-serif;
+            background-color: #fcf9f4;
+            color: #1e2a1e;
+        }
+
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 20px;
+        }
+
+        :root {
+            --vert-fonce: #1e2a1e;
+            --noir: #1a1a1a;
+            --dore: #c9a44c;
+            --beige: #fcf9f4;
+        }
+
+        h1, h2, h3, .logo {
+            font-family: 'Cormorant Garamond', serif;
+            font-weight: 600;
+        }
+
+        header {
+            background-color: var(--noir);
+            padding: 20px 0;
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+            box-shadow: 0 4px 10px rgba(0,0,0,0.2);
+        }
+
+        nav {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .logo {
+            font-size: 32px;
+            text-decoration: none;
+            color: var(--beige);
+            letter-spacing: 1px;
+        }
+
+        .logo span {
+            color: var(--dore);
+        }
+
+        .nav-links {
+            display: flex;
+            list-style: none;
+            gap: 30px;
+        }
+
+        .nav-links a {
+            text-decoration: none;
+            color: var(--beige);
+            font-weight: 500;
+            transition: color 0.3s;
+        }
+
+        .nav-links a:hover,
+        .nav-links a.active {
+            color: var(--dore);
+        }
+
+        .page-header {
+            background: linear-gradient(rgba(0,0,0,0.7), rgba(0,0,0,0.7)), url('images/produits-bg.jpg');
+            background-size: cover;
+            background-position: center;
+            padding: 100px 0;
+            text-align: center;
+            color: white;
+        }
+
+        .page-header h1 {
+            font-size: 60px;
+            margin-bottom: 10px;
+        }
+
+        .page-header p {
+            font-size: 20px;
+            color: var(--dore);
+        }
+
+        .categorie {
+            padding: 80px 0;
+            border-bottom: 1px solid #eee;
+        }
+
+        .categorie:last-child {
+            border-bottom: none;
+        }
+
+        .categorie h2 {
+            font-size: 42px;
+            color: var(--vert-fonce);
+            margin-bottom: 40px;
+            text-align: center;
+        }
+
+        .produits-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 30px;
+        }
+
+        .produit-card {
+            background: white;
+            border-radius: 10px;
+            overflow: hidden;
+            box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+            transition: transform 0.3s;
+        }
+
+        .produit-card:hover {
+            transform: translateY(-10px);
+        }
+
+        .produit-img {
+            height: 200px;
+            background: #ddd;
+        }
+
+        .produit-content {
+            padding: 25px;
+            text-align: center;
+        }
+
+        .produit-content h3 {
+            font-size: 22px;
+            margin-bottom: 10px;
+            color: var(--noir);
+        }
+
+        .produit-content p {
+            color: #666;
+            margin-bottom: 15px;
+        }
+
+        .prix {
+            display: inline-block;
+            background: var(--dore);
+            color: var(--noir);
+            padding: 5px 15px;
+            border-radius: 50px;
+            font-weight: 600;
+        }
+
+        footer {
+            background-color: var(--noir);
+            color: white;
+            padding: 60px 0 30px;
+            margin-top: 50px;
+        }
+
+        .footer-grid {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 40px;
+            margin-bottom: 40px;
+        }
+
+        .footer-col h4 {
+            color: var(--dore);
+            margin-bottom: 20px;
+        }
+
+        .footer-col p {
+            color: rgba(255,255,255,0.8);
+            margin-bottom: 10px;
+        }
+
+        .social-links {
+            display: flex;
+            gap: 15px;
+        }
+
+        .social-links a {
+            color: white;
+            font-size: 20px;
+            transition: color 0.3s;
+        }
+
+        .social-links a:hover {
+            color: var(--dore);
+        }
+
+        .footer-bottom {
+            text-align: center;
+            padding-top: 30px;
+            border-top: 1px solid rgba(255,255,255,0.1);
+        }
+
+        @media (max-width: 768px) {
+            .produits-grid,
+            .footer-grid {
+                grid-template-columns: 1fr;
+            }
+
+            .page-header h1 {
+                font-size: 40px;
+            }
+        }
+    </style>
 </head>
 <body>
-    <header class="header">
+    <header>
         <div class="container">
-            <nav class="navbar">
-                <a href="index.html" class="logo">
-                    <span class="logo-tichka">TICHKA</span>
-                    <span class="logo-by">by</span>
-                    <span class="logo-roman">ROMAN</span>
-                </a>
-                <ul class="nav-menu">
+            <nav>
+                <a href="index.html" class="logo"><span>TICHKA</span> by ROMAN</a>
+                <ul class="nav-links">
                     <li><a href="index.html">Accueil</a></li>
                     <li><a href="produits.html" class="active">Nos créations</a></li>
                     <li><a href="traiteur.html">Traiteur</a></li>
@@ -36,23 +245,126 @@
         </div>
     </section>
 
-    <section class="produits-section">
+    <section class="categorie">
         <div class="container">
-            <h2 class="section-title">Boulangerie</h2>
+            <h2>Boulangerie</h2>
             <div class="produits-grid">
                 <div class="produit-card">
-                    <img src="images/pain-levain.jpg" alt="Pain au levain">
-                    <h3>Pain au levain</h3>
-                    <p>Fermentation lente 24h, farine bio, croûte dorée et croustillante.</p>
-                    <span class="prix">À partir de 4.50 €</span>
+                    <div class="produit-img" style="background: #ccc;"></div>
+                    <div class="produit-content">
+                        <h3>Pain au levain</h3>
+                        <p>Fermentation lente 24h, farine bio, croûte dorée</p>
+                        <span class="prix">4.50 €</span>
+                    </div>
+                </div>
+                <div class="produit-card">
+                    <div class="produit-img" style="background: #ccc;"></div>
+                    <div class="produit-content">
+                        <h3>Baguette tradition</h3>
+                        <p>Farine de meule, pétrissage traditionnel</p>
+                        <span class="prix">3.50 €</span>
+                    </div>
+                </div>
+                <div class="produit-card">
+                    <div class="produit-img" style="background: #ccc;"></div>
+                    <div class="produit-content">
+                        <h3>Pain complet</h3>
+                        <p>Aux céréales et graines, riche en fibres</p>
+                        <span class="prix">5.00 €</span>
+                    </div>
                 </div>
             </div>
         </div>
     </section>
 
-    <footer class="footer">
+    <section class="categorie">
         <div class="container">
-            <p>&copy; 2025 TICHKA BY ROMAN</p>
+            <h2>Pâtisserie</h2>
+            <div class="produits-grid">
+                <div class="produit-card">
+                    <div class="produit-img" style="background: #ccc;"></div>
+                    <div class="produit-content">
+                        <h3>Mille-feuille</h3>
+                        <p>Crème pâtissière, feuilletage pur beurre</p>
+                        <span class="prix">6.50 €</span>
+                    </div>
+                </div>
+                <div class="produit-card">
+                    <div class="produit-img" style="background: #ccc;"></div>
+                    <div class="produit-content">
+                        <h3>Éclair au chocolat</h3>
+                        <p>Chocolat noir, crème légère</p>
+                        <span class="prix">5.50 €</span>
+                    </div>
+                </div>
+                <div class="produit-card">
+                    <div class="produit-img" style="background: #ccc;"></div>
+                    <div class="produit-content">
+                        <h3>Tarte aux fruits</h3>
+                        <p>Fraisiers, framboisiers, fruits de saison</p>
+                        <span class="prix">7.00 €</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="categorie">
+        <div class="container">
+            <h2>Spécialités marocaines</h2>
+            <div class="produits-grid">
+                <div class="produit-card">
+                    <div class="produit-img" style="background: #ccc;"></div>
+                    <div class="produit-content">
+                        <h3>Cornes de gazelle</h3>
+                        <p>Pâte d'amande, fleur d'oranger</p>
+                        <span class="prix">8.00 € / 6pcs</span>
+                    </div>
+                </div>
+                <div class="produit-card">
+                    <div class="produit-img" style="background: #ccc;"></div>
+                    <div class="produit-content">
+                        <h3>Ghriba</h3>
+                        <p>Sablé aux amandes, parfumée</p>
+                        <span class="prix">7.00 € / 8pcs</span>
+                    </div>
+                </div>
+                <div class="produit-card">
+                    <div class="produit-img" style="background: #ccc;"></div>
+                    <div class="produit-content">
+                        <h3>Mhencha</h3>
+                        <p>Pâte d'amande roulée, miel</p>
+                        <span class="prix">12.00 €</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <footer>
+        <div class="container">
+            <div class="footer-grid">
+                <div class="footer-col">
+                    <h4>TICHKA BY ROMAN</h4>
+                    <p>L'authenticité marocaine, l'élégance française</p>
+                </div>
+                <div class="footer-col">
+                    <h4>Horaires</h4>
+                    <p>Tous les jours : 6h30 - 21h00</p>
+                </div>
+                <div class="footer-col">
+                    <h4>Contact</h4>
+                    <p>Témara, Maroc</p>
+                    <p>05 37 XX XX XX</p>
+                    <div class="social-links">
+                        <a href="#"><i class="fab fa-instagram"></i></a>
+                        <a href="#"><i class="fab fa-facebook-f"></i></a>
+                    </div>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2025 TICHKA BY ROMAN</p>
+            </div>
         </div>
     </footer>
 </body>

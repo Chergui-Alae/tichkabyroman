@@ -3,10 +3,10 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>TICHKA BY ROMAN - Boulangerie, Pâtisserie & Traiteur à Témara</title>
+    <title>TICHKA BY ROMAN - Boulangerie, Pâtisserie & Traiteur</title>
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;500;600;700&family=Poppins:wght@300;400;500;600&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;500;600;700&family=Montserrat:wght@300;400;500;600&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     <style>
         * {
@@ -14,79 +14,81 @@
             padding: 0;
             box-sizing: border-box;
         }
-        
+
         body {
-            font-family: 'Poppins', sans-serif;
-            color: #2C1810;
-            line-height: 1.6;
-            background: #FFF9F0;
+            font-family: 'Montserrat', sans-serif;
+            background-color: #fcf9f4;
+            color: #1e2a1e;
         }
-        
+
         .container {
             max-width: 1200px;
             margin: 0 auto;
             padding: 0 20px;
         }
-        
-        /* Logo */
-        .logo {
-            font-size: 28px;
-            font-weight: 700;
-            text-decoration: none;
-            font-family: 'Playfair Display', serif;
+
+        /* ===== COULEURS ===== */
+        :root {
+            --vert-fonce: #1e2a1e;
+            --noir: #1a1a1a;
+            --dore: #c9a44c;
+            --beige: #fcf9f4;
         }
-        
-        .logo-tichka {
-            color: #D4AF37;
+
+        /* ===== TYPOGRAPHIE ===== */
+        h1, h2, h3, .logo {
+            font-family: 'Cormorant Garamond', serif;
+            font-weight: 600;
         }
-        
-        .logo-by {
-            color: #8B5A2B;
-            font-size: 20px;
-            margin: 0 2px;
-        }
-        
-        .logo-roman {
-            color: #2C1810;
-        }
-        
-        /* Navigation */
+
+        /* ===== HEADER ===== */
         header {
-            background: white;
-            box-shadow: 0 2px 20px rgba(0,0,0,0.1);
+            background-color: var(--noir);
+            padding: 20px 0;
             position: sticky;
             top: 0;
             z-index: 1000;
+            box-shadow: 0 4px 10px rgba(0,0,0,0.2);
         }
-        
+
         nav {
             display: flex;
             justify-content: space-between;
             align-items: center;
-            padding: 20px 0;
         }
-        
+
+        .logo {
+            font-size: 32px;
+            text-decoration: none;
+            color: var(--beige);
+            letter-spacing: 1px;
+        }
+
+        .logo span {
+            color: var(--dore);
+        }
+
         .nav-links {
             display: flex;
             list-style: none;
-            gap: 40px;
+            gap: 30px;
         }
-        
+
         .nav-links a {
             text-decoration: none;
-            color: #2C1810;
+            color: var(--beige);
             font-weight: 500;
             transition: color 0.3s;
         }
-        
+
         .nav-links a:hover,
         .nav-links a.active {
-            color: #D4AF37;
+            color: var(--dore);
         }
-        
-        /* Hero Section */
+
+        /* ===== HERO ===== */
         .hero {
-            background: linear-gradient(rgba(0,0,0,0.5), rgba(0,0,0,0.5)), url('images/hero-bg.jpg');
+            background: linear-gradient(rgba(0,0,0,0.6), rgba(0,0,0,0.6)), url('images/hero-bg.jpg');
             background-size: cover;
             background-position: center;
             height: 600px;
@@ -96,137 +98,137 @@
             text-align: center;
             color: white;
         }
-        
+
         .hero h1 {
-            font-size: 60px;
-            font-family: 'Playfair Display', serif;
+            font-size: 70px;
             margin-bottom: 20px;
         }
-        
+
         .hero h1 span {
-            color: #D4AF37;
+            color: var(--dore);
         }
-        
+
         .hero p {
             font-size: 20px;
             margin-bottom: 30px;
+            font-weight: 300;
         }
-        
+
         .btn {
             display: inline-block;
             padding: 15px 40px;
-            background: #D4AF37;
-            color: #2C1810;
+            background-color: var(--dore);
+            color: var(--noir);
             text-decoration: none;
-            border-radius: 50px;
             font-weight: 600;
+            border-radius: 50px;
             transition: all 0.3s;
         }
-        
+
         .btn:hover {
-            background: #8B5A2B;
+            background-color: var(--vert-fonce);
             color: white;
             transform: translateY(-3px);
         }
-        
-        /* Section Description */
+
+        /* ===== SECTION DESCRIPTIVE ===== */
         .description {
             padding: 80px 0;
-            background: white;
+            background-color: white;
         }
-        
+
         .description h2 {
-            font-size: 36px;
-            font-family: 'Playfair Display', serif;
-            color: #2C1810;
+            font-size: 42px;
+            color: var(--vert-fonce);
             text-align: center;
             margin-bottom: 30px;
         }
-        
+
         .description p {
             max-width: 900px;
             margin: 0 auto 20px;
             font-size: 18px;
-            color: #555;
+            color: #444;
             text-align: center;
             line-height: 1.8;
         }
-        
-        /* Spécialités */
-        .specialites {
+
+        /* ===== GRILLE PRODUITS ===== */
+        .produits {
             padding: 80px 0;
-            background: #FDF8F0;
+            background-color: var(--beige);
         }
-        
-        .specialites h2 {
-            font-size: 36px;
-            font-family: 'Playfair Display', serif;
-            color: #2C1810;
+
+        .produits h2 {
+            font-size: 42px;
+            color: var(--vert-fonce);
             text-align: center;
             margin-bottom: 50px;
         }
-        
+
         .cards-grid {
             display: grid;
             grid-template-columns: repeat(3, 1fr);
             gap: 30px;
         }
-        
+
         .card {
             background: white;
-            padding: 40px 30px;
             border-radius: 10px;
+            overflow: hidden;
             box-shadow: 0 5px 20px rgba(0,0,0,0.1);
-            text-align: center;
             transition: transform 0.3s;
         }
-        
+
         .card:hover {
             transform: translateY(-10px);
         }
-        
-        .card i {
-            font-size: 50px;
-            color: #D4AF37;
-            margin-bottom: 20px;
+
+        .card-img {
+            height: 200px;
+            background-color: #ddd;
         }
-        
-        .card h3 {
+
+        .card-content {
+            padding: 25px;
+            text-align: center;
+        }
+
+        .card-content h3 {
             font-size: 24px;
-            margin-bottom: 15px;
-            color: #2C1810;
+            margin-bottom: 10px;
+            color: var(--noir);
         }
-        
-        .card p {
+
+        .card-content p {
             color: #666;
         }
-        
-        /* Section Traiteur */
+
+        /* ===== TRAITEUR ===== */
         .traiteur {
             padding: 80px 0;
             background: white;
         }
-        
+
         .traiteur h2 {
-            font-size: 36px;
-            font-family: 'Playfair Display', serif;
-            color: #2C1810;
+            font-size: 42px;
+            color: var(--vert-fonce);
             text-align: center;
-            margin-bottom: 40px;
+            margin-bottom: 30px;
         }
-        
+
         .traiteur-content {
             max-width: 800px;
             margin: 0 auto;
             text-align: center;
         }
-        
+
         .traiteur-content p {
             font-size: 18px;
-            color: #555;
+            color: #444;
             margin-bottom: 30px;
         }
-        
+
         .traiteur-list {
             display: grid;
             grid-template-columns: repeat(2, 1fr);
@@ -234,80 +236,73 @@
             list-style: none;
             margin-bottom: 40px;
         }
-        
+
         .traiteur-list li {
+            background: var(--beige);
             padding: 10px;
-            background: #FDF8F0;
             border-radius: 5px;
-            color: #2C1810;
+            color: var(--noir);
         }
-        
+
         .traiteur-list i {
-            color: #D4AF37;
+            color: var(--dore);
             margin-right: 10px;
         }
-        
-        /* Footer */
+
+        /* ===== FOOTER ===== */
         footer {
-            background: #2C1810;
+            background-color: var(--noir);
             color: white;
             padding: 60px 0 30px;
         }
-        
+
         .footer-grid {
             display: grid;
             grid-template-columns: repeat(3, 1fr);
             gap: 40px;
             margin-bottom: 40px;
         }
-        
+
         .footer-col h4 {
-            color: #D4AF37;
+            color: var(--dore);
             margin-bottom: 20px;
-            font-size: 18px;
         }
-        
+
         .footer-col p {
             color: rgba(255,255,255,0.8);
             margin-bottom: 10px;
         }
-        
+
         .social-links {
             display: flex;
             gap: 15px;
         }
-        
+
         .social-links a {
             color: white;
             font-size: 20px;
             transition: color 0.3s;
         }
-        
+
         .social-links a:hover {
-            color: #D4AF37;
+            color: var(--dore);
         }
-        
+
         .footer-bottom {
             text-align: center;
             padding-top: 30px;
             border-top: 1px solid rgba(255,255,255,0.1);
-            color: rgba(255,255,255,0.6);
         }
-        
-        /* Responsive */
+
         @media (max-width: 768px) {
             .cards-grid,
             .footer-grid,
             .traiteur-list {
                 grid-template-columns: 1fr;
             }
-            
+
             .hero h1 {
                 font-size: 40px;
-            }
-            
-            .nav-links {
-                display: none;
             }
         }
     </style>
@@ -316,11 +311,7 @@
     <header>
         <div class="container">
             <nav>
-                <a href="index.html" class="logo">
-                    <span class="logo-tichka">TICHKA</span>
-                    <span class="logo-by">by</span>
-                    <span class="logo-roman">ROMAN</span>
-                </a>
+                <a href="index.html" class="logo"><span>TICHKA</span> by ROMAN</a>
                 <ul class="nav-links">
                     <li><a href="index.html" class="active">Accueil</a></li>
                     <li><a href="produits.html">Nos créations</a></li>
@@ -332,9 +323,9 @@
     </header>
 
     <section class="hero">
-        <div class="hero-content">
-            <h1>TICHKA <span>by</span> ROMAN</h1>
-            <p>L'authenticité marocaine, le savoir-faire français</p>
+        <div>
+            <h1><span>TICHKA</span> by ROMAN</h1>
+            <p>L'authenticité marocaine, l'élégance française</p>
             <a href="#decouvrir" class="btn">Découvrir</a>
         </div>
     </section>
@@ -347,24 +338,30 @@
         </div>
     </section>
 
-    <section class="specialites">
+    <section class="produits">
         <div class="container">
             <h2>Nos spécialités</h2>
             <div class="cards-grid">
                 <div class="card">
-                    <i class="fas fa-bread-slice"></i>
-                    <h3>Boulangerie</h3>
-                    <p>Pains au levain, baguettes tradition, pains complets. Un savoir-faire artisanal pour des pains d'exception.</p>
+                    <div class="card-img" style="background: #ccc;"></div>
+                    <div class="card-content">
+                        <h3>Boulangerie</h3>
+                        <p>Pains au levain, baguettes tradition, pains complets. Un savoir-faire artisanal.</p>
+                    </div>
                 </div>
                 <div class="card">
-                    <i class="fas fa-cake"></i>
-                    <h3>Pâtisserie</h3>
-                    <p>Créations gourmandes, entremets, tartes fines, viennoiseries feuilletées au pur beurre.</p>
+                    <div class="card-img" style="background: #ccc;"></div>
+                    <div class="card-content">
+                        <h3>Pâtisserie</h3>
+                        <p>Créations gourmandes, entremets, tartes fines, viennoiseries pur beurre.</p>
+                    </div>
                 </div>
                 <div class="card">
-                    <i class="fas fa-moon"></i>
-                    <h3>Spécialités marocaines</h3>
-                    <p>Cornes de gazelle, ghriba, mhencha, baklawa... Les saveurs authentiques du Maroc.</p>
+                    <div class="card-img" style="background: #ccc;"></div>
+                    <div class="card-content">
+                        <h3>Spécialités marocaines</h3>
+                        <p>Cornes de gazelle, ghriba, mhencha, baklawa... Saveurs authentiques.</p>
+                    </div>
                 </div>
             </div>
         </div>
@@ -378,7 +375,7 @@
                 <ul class="traiteur-list">
                     <li><i class="fas fa-check"></i> Buffets personnalisés</li>
                     <li><i class="fas fa-check"></i> Pâtisseries orientales et occidentales</li>
-                    <li><i class="fas fa-check"></i> Pièces montées et gâteaux de cérémonie</li>
+                    <li><i class="fas fa-check"></i> Pièces montées</li>
                     <li><i class="fas fa-check"></i> Plateaux de mignardises</li>
                 </ul>
                 <a href="contact.html" class="btn">Demander un devis</a>
@@ -408,7 +405,7 @@
                 </div>
             </div>
             <div class="footer-bottom">
-                <p>&copy; 2025 TICHKA BY ROMAN - Tous droits réservés</p>
+                <p>&copy; 2025 TICHKA BY ROMAN</p>
             </div>
         </div>
     </footer>
