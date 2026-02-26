@@ -4,82 +4,56 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Nos créations - TICHKA BY ROMAN</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;500;600;700&family=Montserrat:wght@300;400;500;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     <link rel="stylesheet" href="css/style.css">
-    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700&family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
 </head>
 <body>
-    <header>
-        <nav>
-            <div class="logo">
-                <span class="logo-tichka">TICHKA</span>
-                <span class="logo-by">BY</span>
-                <span class="logo-roman">ROMAN</span>
-            </div>
-            <ul class="nav-links">
-                <li><a href="index.html">Accueil</a></li>
-                <li><a href="produits.html" class="active">Nos créations</a></li>
-                <li><a href="traiteur.html">Traiteur</a></li>
-                <li><a href="contact.html">Contact</a></li>
-            </ul>
-            <div class="menu-burger">☰</div>
-        </nav>
+    <header class="header">
+        <div class="container">
+            <nav class="navbar">
+                <a href="index.html" class="logo">
+                    <span class="logo-tichka">TICHKA</span>
+                    <span class="logo-by">by</span>
+                    <span class="logo-roman">ROMAN</span>
+                </a>
+                <ul class="nav-menu">
+                    <li><a href="index.html">Accueil</a></li>
+                    <li><a href="produits.html" class="active">Nos créations</a></li>
+                    <li><a href="traiteur.html">Traiteur</a></li>
+                    <li><a href="contact.html">Contact</a></li>
+                </ul>
+            </nav>
+        </div>
     </header>
 
-    <main>
-        <section class="page-header">
+    <section class="page-header">
+        <div class="container">
             <h1>Nos créations</h1>
             <p>Découvrez l'univers gustatif de TICHKA BY ROMAN</p>
-        </section>
+        </div>
+    </section>
 
-        <section class="produits-categorie">
-            <div class="container">
-                <h2>Boulangerie</h2>
-                <div class="produits-liste">
-                    <div class="produit-detail">
-                        <img src="images/pain-levain.jpg" alt="Pain au levain">
-                        <div class="produit-info">
-                            <h3>Pain au levain</h3>
-                            <p>Fermentation lente 24h, farine bio, croûte dorée et croustillante.</p>
-                            <span class="prix">À partir de 4.50 €</span>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </section>
-    </main>
-
-    <footer>
-        <!-- Même footer que index.html -->
+    <section class="produits-section">
         <div class="container">
-            <div class="footer-content">
-                <div class="footer-logo">
-                    <span class="logo-tichka">TICHKA</span>
-                    <span class="logo-by">BY</span>
-                    <span class="logo-roman">ROMAN</span>
+            <h2 class="section-title">Boulangerie</h2>
+            <div class="produits-grid">
+                <div class="produit-card">
+                    <img src="images/pain-levain.jpg" alt="Pain au levain">
+                    <h3>Pain au levain</h3>
+                    <p>Fermentation lente 24h, farine bio, croûte dorée et croustillante.</p>
+                    <span class="prix">À partir de 4.50 €</span>
                 </div>
-                <div class="footer-hours">
-                    <h4>Horaires</h4>
-                    <p>Tous les jours : 6h30 - 21h00</p>
-                </div>
-                <div class="footer-contact">
-                    <h4>Contact</h4>
-                    <p>Témara, Maroc</p>
-                    <p>05 37 XX XX XX</p>
-                </div>
-                <div class="footer-social">
-                    <h4>Suivez-nous</h4>
-                    <div class="social-icons">
-                        <a href="https://instagram.com/tichkabyroman" target="_blank">Instagram</a>
-                        <a href="#">Facebook</a>
-                    </div>
-                </div>
-            </div>
-            <div class="footer-bottom">
-                <p>&copy; 2025 TICHKA BY ROMAN - Tous droits réservés</p>
             </div>
         </div>
+    </section>
+
+    <footer class="footer">
+        <div class="container">
+            <p>&copy; 2025 TICHKA BY ROMAN</p>
+        </div>
     </footer>
-    
-    <script src="js/script.js"></script>
 </body>
-</html> 
+</html>
